@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'dva';
-import { browserHistory } from 'dva/router';
+import { hashHistory } from 'dva/router';
 import { Layout } from '../components';
 import NProgress from 'nprogress';
 import classnames from 'classnames';
@@ -45,7 +45,7 @@ class App extends React.Component {
         dispatch({ type: 'app/switchFullScreen' })
       },
       onLogout() {
-        browserHistory.push('/login');
+        hashHistory.push('/login');
       },
       onSwitchSidebar() {
         dispatch({ type: 'app/switchSidebar' });

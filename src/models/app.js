@@ -1,5 +1,5 @@
 
-import { browserHistory } from 'dva/router';
+import { hashHistory } from 'dva/router';
 
 export default {
   namespace: 'app',
@@ -20,12 +20,12 @@ export default {
     * lock ({
       payload,
     }, { call, put }) {
-      browserHistory.push('/lock');
+      hashHistory.push('/lock');
     },
     * unlock ({
       payload,
     }, { call, put }) {
-      browserHistory.push('/dashboard');
+      hashHistory.push('/dashboard');
     },
   },
   reducers: {
