@@ -1,7 +1,9 @@
 ![](https://github.com/huzzbuzz/little-a-dashboard/blob/master/screenshot/logo-black.png) 
 # Little A Dashboard
 
-a little material-design dashboard build upon reactjs, ant design, dva.js. 基于 react.js, ant design, dva.js 开发的类 material 风格的 dashboard。
+a little material-design dashboard build upon reactjs, ant design, dva.js. 基于 react.js, ant design, dva.js 开发的类 material 风格的 dashboard。   
+
+### [Live Demo](http://huzzbuzz.coding.me/)
 
 ## Quick Start   
 
