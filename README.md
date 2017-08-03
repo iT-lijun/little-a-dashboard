@@ -81,7 +81,7 @@ npm run build
 ![](https://github.com/huzzbuzz/little-a-dashboard/blob/master/screenshot/setting.gif)
 
 
-## Acknowledge 
+## Acknowledgements 
 
 - [Ant Design](https://github.com/ant-design/ant-design)
 - [Creative Tim](https://github.com/creativetimofficial)
