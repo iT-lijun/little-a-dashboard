@@ -1,7 +1,9 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Icon, Popover, Badge, Avatar, Input } from 'antd';
+import Menus from './menus';
 import styles from './layout.less';
+
 const Search = Input.Search;
 
 class Header extends React.Component {
@@ -14,7 +16,10 @@ class Header extends React.Component {
       onFull,
       onExitFull,
       onLogout,
-      onSwitchSidebar, } = this.props;
+      onSwitchSidebar,
+      siderRespons,
+      menuResponsVisible,
+      onSwitchMenuPopover } = this.props;
 
     const msgContent = (
       <div>
@@ -45,9 +50,23 @@ class Header extends React.Component {
       <navbar-cmp>
         <nav className={classnames(styles.navbar, styles['navbar-transparent'], styles['navbar-absolute'])}>
           <div className={styles['navbar-container']}>
-            <div className={styles.btn} onClick={onSwitchSidebar}>
-              <Icon type={sidebarFold ? 'menu-unfold' : 'menu-fold'} />
-            </div>
+            {
+              // Responsive Sidebar
+              siderRespons ?
+                <Popover
+                  placement="bottomLeft"
+                  onVisibleChange={onSwitchMenuPopover}
+                  visible={menuResponsVisible}
+                  trigger="click"
+                  content={<Menus />}
+                  overlayClassName={styles.popmenu}>
+                  <div className={styles.btn}><Icon type='bars' /></div>
+                </Popover>
+                :
+                <div className={styles.btn} onClick={onSwitchSidebar}>
+                  <Icon type={sidebarFold ? 'menu-unfold' : 'menu-fold'} />
+                </div>
+            }
             <ul className={styles['navbar-right']}>
               <li>
                 <Input placeholder="Search" style={searchStyle} />

@@ -14,11 +14,13 @@ class App extends React.Component {
   render() {
 
     const { children, dispatch, app, loading } = this.props;
-    const { sidebarFold, fullScreen, sidebarBgImg, sidebarBgColor, isShowSidebarBgImg } = app;
+    const { sidebarFold, siderRespons, fullScreen, sidebarBgImg, sidebarBgColor, isShowSidebarBgImg, menuResponsVisible } = app;
 
     const headerProps = {
       fullScreen,
       sidebarFold,
+      siderRespons,
+      menuResponsVisible,
       onLock() {
         dispatch({ type: 'app/lock' });
       },
@@ -50,10 +52,13 @@ class App extends React.Component {
       onSwitchSidebar() {
         dispatch({ type: 'app/switchSidebar' });
       },
+      onSwitchMenuPopover() {
+        dispatch({ type: 'app/switchMenuPopver' });
+      }
     }
 
     const siderbarProps = {
-      sidebarFold,
+      sidebarFold
     }
 
     const href = window.location.href;
@@ -66,16 +71,21 @@ class App extends React.Component {
     }
 
     return (
-      <div className={classnames(LayoutStyles.layout, { [LayoutStyles.fold]: sidebarFold || false })}>
-        <aside className={classnames(LayoutStyles.siderbar, LayoutStyles[`siderbar-bg-${sidebarBgColor}`])}>
-          {
-            isShowSidebarBgImg ?
-            <div className={LayoutStyles['siderbar-bg-img']} style={{ backgroundImage: `url(${require(`../assets/img/sidebar-${sidebarBgImg}.jpg`)})` }}></div>
-            :
-            ''
-          }
-          <Sider {...siderbarProps} />
-        </aside>
+      <div className={classnames(LayoutStyles.layout, { [LayoutStyles.fold]: siderRespons ? false : sidebarFold }, { [LayoutStyles.responsive]: siderRespons })}>
+        {
+          !siderRespons ?
+          <aside className={classnames(LayoutStyles.siderbar, LayoutStyles[`siderbar-bg-${sidebarBgColor}`])}>
+            {
+              isShowSidebarBgImg ?
+              <div className={LayoutStyles['siderbar-bg-img']} style={{ backgroundImage: `url(${require(`../assets/img/sidebar-${sidebarBgImg}.jpg`)})` }}></div>
+              :
+              ''
+            }
+            <Sider {...siderbarProps} />
+          </aside>
+          :
+          ''
+        }
         <div className={LayoutStyles.main}>
           <Header {...headerProps} />
           <div className={LayoutStyles.container}>

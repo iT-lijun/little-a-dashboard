@@ -9,10 +9,16 @@ export default {
     sidebarBgColor: localStorage.getItem('sidebarBgColor') ? localStorage.getItem('sidebarBgColor') : 'red',
     sidebarBgImg: localStorage.getItem('sidebarBgImg') ? localStorage.getItem('sidebarBgImg') : '1',
     isShowSidebarBgImg: true,
+    // Responsive Sidebar
+    siderRespons: document.body.clientWidth < 1201,
+    menuResponsVisible: false,
   },
   subscriptions: {
 
     setup ({ dispatch }) {
+      window.onresize = () => {
+        dispatch({ type: 'siderResponsive' });
+      }
     },
 
   },
@@ -27,6 +33,13 @@ export default {
     }, { call, put }) {
       hashHistory.push('/dashboard');
     },
+    * siderResponsive ({ payload }, { put, select }) {
+      const { app } = yield select(state => state);
+      const isResponsive = document.body.clientWidth < 1201;
+      if (isResponsive !== app.siderRespons) {
+        yield put({ type: 'switchSidebarResponsive', payload: isResponsive })
+      }
+    }
   },
   reducers: {
     switchSidebar (state) {
@@ -56,6 +69,20 @@ export default {
       return {
         ...state,
         isShowSidebarBgImg: !state.isShowSidebarBgImg,
+      }
+    },
+
+    switchSidebarResponsive (state, { payload }) {
+      return {
+        ...state,
+        siderRespons: payload,
+      }
+    },
+
+    switchMenuPopver (state) {
+      return {
+        ...state,
+        menuResponsVisible: !state.menuResponsVisible,
       }
     },
   },

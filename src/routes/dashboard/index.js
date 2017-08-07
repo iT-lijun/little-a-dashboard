@@ -22,7 +22,6 @@ class Dashboard extends React.Component {
       <div>
         <FigureCard {...figurecardProps} />
         <ImageCard {...imagecardProps} />
-        <MapCard />
       </div>
     );
   }

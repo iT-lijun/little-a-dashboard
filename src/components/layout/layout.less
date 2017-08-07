@@ -5,6 +5,12 @@
   position: relative;
   height: 100vh;
 
+  &.responsive {
+    .main {
+      margin-left: 0;
+    }
+  }
+
   .siderbar {
     color: #999;
     width: 250px;
@@ -171,6 +177,7 @@
       padding-left: 20px;
       margin-right: auto;
       margin-left: auto;
+
     }
     .navbar-right {
       float: right!important;
@@ -202,6 +209,7 @@
         box-shadow: 0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2) !important;
       }
     }
+
   }
 
   // main
@@ -280,6 +288,7 @@
 
 
   :global {
+
     // override antd menu theme=light style
     .ant-menu-light {
       color: rgba(255, 255, 255, 0.8);
@@ -291,6 +300,7 @@
           color: #fff !important;
         }
       }
+
       // menu model=vertical
       &.ant-menu-vertical {
         border-right: 0 !important;
@@ -347,6 +357,26 @@
         }
       }
 
+    }
+  }
+}
+
+.popmenu {
+  width: 180px !important;
+
+  :global .ant-popover-inner-content {
+    padding: 0;
+
+    .ant-menu-inline .ant-menu-item,
+    .ant-menu-vertical .ant-menu-item {
+      border-right: 0;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    .ant-menu-inline .ant-menu-item-selected,
+    .ant-menu-inline .ant-menu-selected {
+      border-right: 0;
     }
   }
 }
