@@ -77,6 +77,10 @@ npm run build
 ![](https://github.com/huzzbuzz/little-a-dashboard/blob/master/screenshot/sidebar.gif)
 
 
+#### Responsive Sidebar
+![](https://github.com/huzzbuzz/little-a-dashboard/blob/master/screenshot/responsive-sidebar.gif)
+
+
 #### Setting
 ![](https://github.com/huzzbuzz/little-a-dashboard/blob/master/screenshot/setting.gif)
 
