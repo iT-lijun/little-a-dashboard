@@ -45,7 +45,7 @@ npm run build
 
 ## Further Plan
 - [ ] Automatically select the menu based on the url
-- [ ] Responsive Sidebar
+- [x] Responsive Sidebar
 - [ ] Full RESTful API
 
 ## Screenshot
