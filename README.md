@@ -30,7 +30,7 @@ npm start
 ```bash
 npm run build
 ``` 
-> it will automatically generated dist directory
+> it will builds the app for production to the dist folder. your app is ready to be deployed.
 
 
 ## Already Done
