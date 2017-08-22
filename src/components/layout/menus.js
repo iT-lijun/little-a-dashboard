@@ -7,10 +7,10 @@ const SubMenu = Menu.SubMenu;
 class Menus extends React.Component {
 
   render() {
-    const { sidebarFold } = this.props;
+    const { sidebarFold, onMenuClick } = this.props;
 
     return (
-      <Menu mode={sidebarFold ? 'vertical' : 'inline'} theme="light">
+      <Menu mode={sidebarFold ? 'vertical' : 'inline'} theme="light" onClick={onMenuClick}>
         <Menu.Item key="1">
           <Link to="/dashboard">
             <Icon type="appstore-o" />Dashboard

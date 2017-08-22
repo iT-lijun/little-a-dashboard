@@ -38,6 +38,14 @@ class Header extends React.Component {
       borderRadius: '2px'
     };
 
+    const memusProps = {
+      onMenuClick() {
+        if (siderRespons) {
+          onSwitchMenuPopover();
+        }
+      }
+    }
+
     const popoverStyle = {
       fontSize: 12
     };
@@ -58,7 +66,7 @@ class Header extends React.Component {
                   onVisibleChange={onSwitchMenuPopover}
                   visible={menuResponsVisible}
                   trigger="click"
-                  content={<Menus />}
+                  content={<Menus {...memusProps} />}
                   overlayClassName={styles.popmenu}>
                   <div className={styles.btn}><Icon type='bars' /></div>
                 </Popover>

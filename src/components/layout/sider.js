@@ -9,7 +9,8 @@ class Sider extends React.Component {
     const { sidebarFold } = this.props;
 
     const menuProps = {
-      sidebarFold
+      sidebarFold,
+      onMenuClick() { }
     }
     return (
       <div>
