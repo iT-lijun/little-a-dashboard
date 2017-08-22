@@ -36,24 +36,45 @@ export default {
     imagecard: [
       {
         image: '1',
-        title: 'Cozy 5 Stars Apartment',
-        desc: 'The place is close to Barceloneta Beach and bus stop just 2 min by walk and...',
-        footerTitle: '$899/night',
-        position: 'Barcelona, Spain'
+        title: 'here is title',
+        desc: 'here is desc ...',
+        footerTitle: 'footer title',
+        position: 'City, Country'
       },
       {
         image: '2',
-        title: 'Office Studio',
-        desc: 'The place is close to Metro Station and bus stop just 2 min by walk and near...',
-        footerTitle: '$1,119/night',
+        title: 'here is title',
+        desc: 'here is desc ...',
+        footerTitle: 'footer title',
         position: 'London, UK'
       },
       {
         image: '3',
-        title: 'Beautiful Castle',
-        desc: 'The place is close to Metro Station and bus stop just 2 min by walk and near...',
-        footerTitle: '$459/night',
-        position: 'Milan, Italy'
+        title: 'here is title',
+        desc: 'here is desc ...',
+        footerTitle: 'footer title',
+        position: 'City, Country'
+      },
+      {
+        image: '4',
+        title: 'here is title',
+        desc: 'here is desc，Ba la Ba la Ba la ...',
+        footerTitle: 'footer title',
+        position: 'Peiking, China'
+      },
+      {
+        image: '5',
+        title: '热气球啊啊',
+        desc: 'here is desc，Ba la Ba la Ba la Ba la Ba la Ba la Ba la Ba la Ba la Ba la Ba la ...',
+        footerTitle: 'footer title',
+        position: 'City, Country'
+      },
+      {
+        image: '6',
+        title: 'here is title',
+        desc: 'here is desc，Ba la Ba la Ba la Ba la Ba la Ba la Ba la Ba la Ba la Ba la Ba la ...',
+        footerTitle: 'footer title',
+        position: 'City, Country'
       }
     ]
   },

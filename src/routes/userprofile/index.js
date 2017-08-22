@@ -126,7 +126,7 @@ class Profile extends React.Component {
     return (
       <div>
         <Row className={styles.showcase}>
-          <Col span={15}>
+          <Col xs={24} sm={24} md={12} lg={15} xl={15}>
             <Card
               bordered={false}
               noHovering
@@ -251,8 +251,8 @@ class Profile extends React.Component {
               </Form>
             </Card>
           </Col>
-          <Col span={1}></Col>
-          <Col span={8}>
+          <Col xs={24} sm={24} md={1} lg={1} xl={1} style={{ marginTop: 60 }}></Col>
+          <Col xs={24} sm={24} md={11} lg={8} xl={8}>
             <Card
               bordered={false}
               noHovering

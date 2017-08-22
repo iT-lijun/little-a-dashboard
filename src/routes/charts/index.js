@@ -41,7 +41,7 @@ class Charts extends React.Component {
           </Col>
         </Row>
         <Row gutter={16} className={styles.showcase}>
-          <Col span={8}>
+          <Col xs={24} sm={24} md={8} lg={8} xl={8} style={{ marginBottom: 30 }}>
             <Card
               bordered={false}
               noHovering
@@ -53,7 +53,7 @@ class Charts extends React.Component {
                 style={reStyle} />
             </Card>
           </Col>
-          <Col span={8}>
+          <Col xs={24} sm={24} md={8} lg={8} xl={8} style={{ marginBottom: 30 }}>
             <Card
               bordered={false}
               noHovering
@@ -66,7 +66,7 @@ class Charts extends React.Component {
                 style={reStyle} />
             </Card>
           </Col>
-          <Col span={8}>
+          <Col xs={24} sm={24} md={8} lg={8} xl={8} style={{ marginBottom: 30 }}>
             <Card
               bordered={false}
               noHovering
@@ -91,7 +91,7 @@ class Charts extends React.Component {
           </Col>
         </Row>
         <Row gutter={32} className={styles.showcase}>
-          <Col span={12}>
+          <Col xs={24} sm={24} md={24} lg={12} xl={12} style={{ marginBottom: 30 }}>
             <Card
               bordered={false}
               noHovering
@@ -103,7 +103,7 @@ class Charts extends React.Component {
                 style={{height: '600px', width: '100%'}} />
             </Card>
           </Col>
-          <Col span={12}>
+          <Col xs={24} sm={24} md={24} lg={12} xl={12}>
             <Card
               bordered={false}
               noHovering

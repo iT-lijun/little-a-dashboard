@@ -14,7 +14,7 @@ class ImageCard extends React.Component {
             {
               imagecard && imagecard.map((v, k) => {
                 return (
-                  <Col span={8} key={k}>
+                  <Col xs={12} sm={12} md={12} lg={8} xl={8} key={k} style={{ marginBottom: 50 }}>
                     <Card
                       bordered={false}
                       noHovering>

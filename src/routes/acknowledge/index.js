@@ -40,7 +40,7 @@ class Acknowledge extends React.Component {
           {
             data && data.length > 0 ?
             data.map((v) => {
-              return <Col key={v.id} span={6}>
+              return <Col key={v.id} xs={24} sm={24} md={12} lg={6} xl={6} style={{ marginBottom: 30 }}>
                 <Card bordered={false} noHovering>
                   <h2 title={v.title}>{v.title.length > 10 ? v && v.title.substring(0, 10) + '...' : v.title}</h2>
                   <div className={styles.icon}>

@@ -15,7 +15,7 @@ class FigureCard extends React.Component {
           {
             figurecard.map((v, k) => {
               return (
-                <Col span={6} key={k}>
+                <Col xs={24} sm={24} md={12} lg={6} xl={6} key={k} style={{ marginBottom: 30 }}>
                   <Card
                     title={
                     <div>
