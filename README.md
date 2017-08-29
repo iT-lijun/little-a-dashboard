@@ -1,5 +1,8 @@
 ![](https://github.com/huzzbuzz/little-a-dashboard/blob/master/screenshot/logo-black.png) 
-# Little A Dashboard
+# Little A Dashboard           
+
+[![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
+![](https://img.shields.io/badge/language-javascript-orange.svg)
 
 a little material-design dashboard build upon reactjs, ant design, dva.js. 基于 react.js, ant design, dva.js 开发的类 material 风格的 dashboard。:laughing: :laughing: :laughing:         
 
@@ -7,7 +10,7 @@ a little material-design dashboard build upon reactjs, ant design, dva.js. 基�
 
 > 技术栈：react、react-router、ant design、dva、roadhog...
 
-## Quick Start   
+## Quick Start 开始   
 
 
 #### Clone 
@@ -33,7 +36,7 @@ npm run build
 > it will builds the app for production to the dist folder. your app is ready to be deployed.
 
 
-## Already Done
+## Already Done 特性
 - [x] 类 material-ui 风格
 - [x] 登录、退出、锁屏（模拟）
 - [x] 主页及其他示例页
@@ -43,12 +46,12 @@ npm run build
 - [x] 简易 Mock 功能
 - [x] 打包后，Filename Hash
 
-## Further Plan
+## Further Plan 计划
 - [ ] Automatically select the menu based on the url
 - [x] Responsive Sidebar
 - [ ] Full RESTful API
 
-## Screenshot
+## Screenshot 截图
 
 #### Dashboard
 ![](https://github.com/huzzbuzz/little-a-dashboard/blob/master/screenshot/dashboard.gif)
@@ -85,7 +88,7 @@ npm run build
 ![](https://github.com/huzzbuzz/little-a-dashboard/blob/master/screenshot/setting.gif)
 
 
-## Acknowledgements 
+## Acknowledgements 致谢 
 
 - [Ant Design](https://github.com/ant-design/ant-design)
 - [Creative Tim](https://github.com/creativetimofficial)
@@ -94,7 +97,7 @@ npm run build
 - [Sweet Alert 2](https://github.com/limonte/sweetalert2)
 
 
-## Project Structure
+## Project Structure 结构
 
 ```bash
 ├── /dist/           # 打包输出
