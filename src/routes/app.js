@@ -11,7 +11,7 @@ let lastHref
 
 class App extends React.Component {
   render () {
-    const { children, dispatch, app, loading } = this.props
+    const { children, dispatch, app, loading, routes } = this.props
     const { sidebarFold, siderRespons, fullScreen, sidebarBgImg, sidebarBgColor, isShowSidebarBgImg, menuResponsVisible } = app
 
     const headerProps = {
@@ -56,7 +56,8 @@ class App extends React.Component {
     }
 
     const siderbarProps = {
-      sidebarFold
+      sidebarFold,
+      routes
     }
 
     const href = window.location.href

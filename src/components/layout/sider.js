@@ -5,9 +5,10 @@ import { config } from 'utils'
 
 class Sider extends React.Component {
   render () {
-    const { sidebarFold } = this.props
+    const { sidebarFold, routes } = this.props
 
     const menuProps = {
+      routes,
       sidebarFold,
       onMenuClick () { }
     }

@@ -49,7 +49,7 @@ npm run build
 - [x] 打包后，Filename Hash
 
 ## Further Plan 计划
-- [ ] Automatically select the menu based on the url
+- [x] Automatically select the menu based on the url
 - [x] Responsive Sidebar
 - [ ] Full RESTful API
 
