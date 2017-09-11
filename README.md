@@ -95,7 +95,6 @@ npm run build
 - [Creative Tim](https://github.com/creativetimofficial)
 - [Angular Material Dashboard](https://github.com/wangdicoder/angular-material-dashboard)
 - [Antd Admin](https://github.com/zuiidea/antd-admin)
-- [Sweet Alert 2](https://github.com/limonte/sweetalert2)
 
 
 ## Project Structure 结构
