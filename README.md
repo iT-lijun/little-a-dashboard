@@ -43,10 +43,9 @@ npm run build
 - [x] 类 material-ui 风格
 - [x] 登录、退出、锁屏（模拟）
 - [x] 主页及其他示例页
-- [x] 菜单折叠、换肤
+- [x] 菜单折叠、简单换肤
 - [x] redux 完整使用示例
 - [x] 动态路由，按需加载
-- [x] 简易 Mock 功能
 - [x] 打包后，Filename Hash
 
 ## Further Plan 计划
