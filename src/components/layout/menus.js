@@ -7,7 +7,7 @@ const SubMenu = Menu.SubMenu
 class Menus extends React.Component {
 
   getMenuSelectedKey = (routes) => {
-    if (routes && routes.length <=0 ) return ''
+    if (routes === undefined ) return ''
     let gn = '';
     for (let i = routes.length - 1; i >= 0; i--) {
       const obj = routes[i];
