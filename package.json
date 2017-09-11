@@ -43,7 +43,7 @@
   },
   "scripts": {
     "start": "roadhog server",
-    "lint": "eslint --fix --ext .js src",
+    "lint": "standard src/**/*.js",
     "build": "roadhog build"
   }
 }

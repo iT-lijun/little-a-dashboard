@@ -4,13 +4,13 @@ export default {
   state: {
   },
   subscriptions: {
-    setup({ dispatch, history }) {
-    },
+    setup ({ dispatch, history }) {
+    }
   },
   effects: {
 
   },
   reducers: {
 
-  },
+  }
 }

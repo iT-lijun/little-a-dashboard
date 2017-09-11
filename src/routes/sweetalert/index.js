@@ -1,8 +1,8 @@
-import React from 'react';
-import { Row, Col, Card, Button, Icon } from 'antd';
-import swal from 'sweetalert2';
-import styles from './alert.less';
-import * as sa2css from 'sweetalert2/dist/sweetalert2.min.css';
+import React from 'react'
+import { Row, Col, Card, Button } from 'antd'
+import swal from 'sweetalert2'
+import styles from './alert.less'
+import * as sa2css from 'sweetalert2/dist/sweetalert2.min.css'
 
 class SweetAlert extends React.Component {
 
@@ -10,21 +10,20 @@ class SweetAlert extends React.Component {
     swal(props);
   }
 
-  render() {
-
+  render () {
     return (
       <div>
         <Row className={styles.header}>
           <Col span={24}>
             <h1>Sweet Alert 2</h1>
-            <h2>A beautiful, responsive, customizable, accessible (WAI-ARIA) replacement for JavaScript's popup boxes, for more detail, please see the <a href="https://github.com/limonte/sweetalert2" target="_blank">doc</a></h2>
+            <h2>A beautiful, responsive, customizable, accessible (WAI-ARIA) replacement for JavaScript's popup boxes, for more detail, please see the <a href='https://github.com/limonte/sweetalert2' target='_blank'>doc</a></h2>
           </Col>
         </Row>
         <Row gutter={48} className={styles.showcase}>
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>A basic message</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => this.handleAlert({
                   title: 'Any fool can use a computer'})}
                 >Try Me</Button>
@@ -33,7 +32,7 @@ class SweetAlert extends React.Component {
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>A title with a text under</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => this.handleAlert({
                   title: 'The Internet?',
                   text: 'That thing is still around?',
@@ -44,7 +43,7 @@ class SweetAlert extends React.Component {
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>A success message</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => this.handleAlert({
                   title: 'Good job!',
                   text: 'You clicked the button.',
@@ -57,7 +56,7 @@ class SweetAlert extends React.Component {
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>A message with auto close timer</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => this.handleAlert({
                   title: 'Auto close alert!',
                   text: 'I will close in 2 seconds.',
@@ -68,7 +67,7 @@ class SweetAlert extends React.Component {
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>Custom HTML description and buttons</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => this.handleAlert({
                   title: '<i>HTML</i> <u>example</u>',
                   type: 'info',
@@ -87,7 +86,7 @@ class SweetAlert extends React.Component {
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>A warning message, with a function attached to the "Confirm"-button...</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => this.handleAlert({
                   title: 'Are you sure?',
                   text: "You won't be able to revert this!",
@@ -105,7 +104,7 @@ class SweetAlert extends React.Component {
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>... and by passing a parameter, you can execute something else for "Cancel".</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => swal({
                   title: 'Are you sure?',
                   text: "You won't be able to revert this!",
@@ -140,7 +139,7 @@ class SweetAlert extends React.Component {
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>A message with custom width, padding and background</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => this.handleAlert({
                   title: 'Custom width, padding, background.',
                   width: 600,
@@ -153,7 +152,7 @@ class SweetAlert extends React.Component {
           <Col span={8}>
             <Card bordered={false} noHovering>
               <p>Ajax request example</p>
-              <Button type="primary" size="large"
+              <Button type='primary' size='large'
                 onClick={() => this.handleAlert({
                   title: 'Submit email to run ajax request',
                   input: 'email',
@@ -178,8 +177,8 @@ class SweetAlert extends React.Component {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
-export default SweetAlert;
+export default SweetAlert

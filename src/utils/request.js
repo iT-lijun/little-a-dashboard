@@ -1,46 +1,46 @@
-import fetch from 'dva/fetch';
-import querystring from 'querystring';
+import fetch from 'dva/fetch'
+import querystring from 'querystring'
 
 const formatJson = (k, v) => {
   if (v === undefined) {
-    return '';
+    return ''
   }
-  return v;
+  return v
 }
 
-function check401(response) {
+function check401 (response) {
   if (response.status === 401) {
-    const key = 'Unauthorized';
-    return Promise.reject({ key });
+    const key = 'Unauthorized'
+    return Promise.reject({ key })
   }
-  return response;
+  return response
 }
 
-function checkStatus(response) {
+function checkStatus (response) {
   if (response.status >= 200 && response.status < 300) {
-    return response;
+    return response
   }
 
-  const error = new Error(response.statusText);
-  error.response = response;
-  throw error;
+  const error = new Error(response.statusText)
+  error.response = response
+  throw error
 }
 
-function jsonParse(res) {
+function jsonParse (res) {
   if (res.status !== 200) {
-    return Promise.reject(res);
+    return Promise.reject(res)
   }
   return res.json().then((result) => {
     if (result) {
       if (result.isError) {
-        console.log('result.isError');
-        return Promise.reject(new Error(result.message));
+        console.log('result.isError')
+        return Promise.reject(new Error(result.message))
       } else {
-        return result.data;
+        return result.data
       }
     }
-    return null;
-  });
+    return null
+  })
 }
 
 /**
@@ -50,23 +50,22 @@ function jsonParse(res) {
  * @param  {object} [options]
  * @return {object}
  */
-function request(url, options) {
-  const opts = { ...options };
-  opts.credentials = 'include';
+function request (url, options) {
+  const opts = { ...options }
+  opts.credentials = 'include'
   opts.headers = {
     ...opts.headers,
-    'Content-Type': 'application/json;charset=utf-8',
-  };
+    'Content-Type': 'application/json;charset=utf-8'
+  }
 
   return fetch(url, opts)
     .then(checkStatus)
     .then(check401)
     .then(jsonParse)
     .catch((err) => {
-      throw new Error(`${err.message}`, err.message || '错误');
-    });
+      throw new Error(`${err.message}`, err.message || '错误')
+    })
 }
-
 
 /**
  * post。
@@ -74,7 +73,7 @@ function request(url, options) {
  * @param data
  * @param options
  */
-function post(url, data = {}, options) {
+function post (url, data = {}, options) {
   return request(url, { ...options, method: 'POST', body: JSON.stringify(data, formatJson) })
 }
 
@@ -83,8 +82,8 @@ function post(url, data = {}, options) {
  * @param url
  * @param options
  */
-function del(url, options) {
-  return request(url, { ...options, method: 'DELETE' });
+function del (url, options) {
+  return request(url, { ...options, method: 'DELETE' })
 }
 
 /**
@@ -93,8 +92,8 @@ function del(url, options) {
  * @param data
  * @param options
  */
-function put(url, data = {}, options) {
-  return request(url, { ...options, method: 'PUT', body: JSON.stringify(data, formatJson) });
+function put (url, data = {}, options) {
+  return request(url, { ...options, method: 'PUT', body: JSON.stringify(data, formatJson) })
 }
 /**
  * patch
@@ -102,8 +101,8 @@ function put(url, data = {}, options) {
  * @param data
  * @param options
  */
-function patch(url, data = {}, options) {
-  return request(url, { ...options, method: 'PATCH', body: JSON.stringify(data, formatJson) });
+function patch (url, data = {}, options) {
+  return request(url, { ...options, method: 'PATCH', body: JSON.stringify(data, formatJson) })
 }
 
 /**
@@ -111,8 +110,8 @@ function patch(url, data = {}, options) {
  * @param url
  * @param options
  */
-function get(url, data, options) {
-  return request(`${url}${data ? '?' + querystring.stringify(data) : ''}`, { ...options, method: 'GET' });
+function get (url, data, options) {
+  return request(`${url}${data ? '?' + querystring.stringify(data) : ''}`, { ...options, method: 'GET' })
 }
 
-export { post, del, put, patch, get };
+export { post, del, put, patch, get }

@@ -1,12 +1,10 @@
-import { query } from '../services/charts';
-
 export default {
   namespace: 'charts',
   state: {
     options: {
       sdoption: {
         title: {
-          text: '堆叠图',
+          text: '堆叠图'
         },
         tooltip: {
           trigger: 'axis'
@@ -437,11 +435,11 @@ export default {
                 shadowColor: '#fff', // 默认透明
                 shadowBlur: 10
               },
-              formatter: function(v) {
+              formatter: function (v) {
                 switch (v + '') {
-                  case '0' : return 'E';
-                  case '1' : return 'Gas';
-                  case '2' : return 'F';
+                  case '0' : return 'E'
+                  case '1' : return 'Gas'
+                  case '2' : return 'F'
                 }
               }
             },
@@ -495,11 +493,11 @@ export default {
                 shadowColor: '#fff', // 默认透明
                 shadowBlur: 10
               },
-              formatter: function(v) {
+              formatter: function (v) {
                 switch (v + '') {
-                  case '0' : return 'H';
-                  case '1' : return 'Water';
-                  case '2' : return 'C';
+                  case '0' : return 'H'
+                  case '1' : return 'Water'
+                  case '2' : return 'C'
                 }
               }
             },
@@ -530,14 +528,13 @@ export default {
     }
   },
   subscriptions: {
-    setup({ dispatch, history }) {
-    },
+    setup ({ dispatch, history }) {
+    }
   },
   effects: {
-    * query({ payload }, { put, call }) {
-      const data = yield call(query, payload);
+    * query ({ payload }, { put, call }) {
     }
   },
   reducers: {
-  },
+  }
 }

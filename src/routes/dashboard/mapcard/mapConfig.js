@@ -479,15 +479,14 @@ let value3 = [{
 }, {
   name: '北马里亚纳',
   value: 0
-},
+}
 
-
-  //{name:'南苏丹',value:0},
-  //{name:'索马里兰',value:0},
-  //{name:'黑山',value:0},
-  //{name:'科索沃',value:0},
-  //{name:'塞尔维亚',value:0},
-];
+  // {name:'南苏丹',value:0},
+  // {name:'索马里兰',value:0},
+  // {name:'黑山',value:0},
+  // {name:'科索沃',value:0},
+  // {name:'塞尔维亚',value:0},
+]
 
 let nameMap = {
   Afghanistan: '阿富汗',
@@ -703,11 +702,10 @@ let nameMap = {
   Somaliland: '索马里兰',
   Montenegro: '黑山',
   Kosovo: '科索沃',
-  'Republic of Serbia': '塞尔维亚',
-};
+  'Republic of Serbia': '塞尔维亚'
+}
 
-
-function getOption() {
+function getOption () {
   let option = {
     timeline: {
       axisType: 'category',
@@ -756,7 +754,7 @@ function getOption() {
         top: 'bottom',
         textStyle: {
           color: '#000'
-        },
+        }
             // min: 0,
             // max: 60000,
             // text:['High','Low'],
@@ -789,10 +787,10 @@ function getOption() {
       },
       tooltip: {
         trigger: 'item',
-        formatter: function(params) {
-          let value = (params.value);
-          value = value;
-          return params.name + ' : ' + value + ' 百万美元/km²';
+        formatter: function (params) {
+          let value = (params.value)
+          value = value
+          return params.name + ' : ' + value + ' 百万美元/km²'
         }
       },
       series: {
@@ -801,7 +799,7 @@ function getOption() {
     }]
   }
 
-  return option;
+  return option
 }
 
-exports.getOption = getOption();
+exports.getOption = getOption()

@@ -1,12 +1,12 @@
-import React, { PropTypes } from 'react';
-import { Card, Col, Row } from 'antd';
-import GoogleMap from 'google-map-react';
-import styles from './map.less';
+import React from 'react'
+import { Col, Row } from 'antd'
+import GoogleMap from 'google-map-react'
+import styles from './map.less'
 
-const K_WIDTH = 40;
-const K_HEIGHT = 40;
+const K_WIDTH = 40
+const K_HEIGHT = 40
 
-function createMapOptions(maps) {
+function createMapOptions (maps) {
   return {
     zoomControlOptions: {
       position: maps.ControlPosition.RIGHT_CENTER,
@@ -16,29 +16,27 @@ function createMapOptions(maps) {
       position: maps.ControlPosition.TOP_RIGHT
     },
     mapTypeControl: true
-  };
+  }
 }
 
 class GoogleMaps extends React.Component {
-
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
     this.state = {
       center: [22.229184, 113.558653],
       zoom: 13,
       greatPlaceCoords: {lat: 22.230088, lng: 113.550173}
-    };
+    }
   }
 
-  render() {
-
+  render () {
     return (
       <div>
         <Row className={styles.header}>
           <Col span={24}>
             <h1>Google Map React</h1>
-            <h2>universal google map react component, allows render react components on the google map, For more detail, please see <a href="https://github.com/istarkov/google-map-react" target="_blank">doc</a>.</h2>
+            <h2>universal google map react component, allows render react components on the google map, For more detail, please see <a href='https://github.com/istarkov/google-map-react' target='_blank'>doc</a>.</h2>
           </Col>
         </Row>
         <Row className={styles.showcase}>
@@ -54,13 +52,12 @@ class GoogleMaps extends React.Component {
           </Col>
         </Row>
       </div>
-    );
+    )
   }
 }
 
 class MyGreatPlace extends React.Component {
-
-  render() {
+  render () {
     const greatPlaceStyle = {
       position: 'absolute',
       width: K_WIDTH - 5,
@@ -75,14 +72,14 @@ class MyGreatPlace extends React.Component {
       fontSize: 16,
       fontWeight: 'bold',
       padding: 5
-    };
+    }
 
     return (
-       <div style={greatPlaceStyle}>
-          {this.props.text}
-       </div>
-    );
+      <div style={greatPlaceStyle}>
+        {this.props.text}
+      </div>
+    )
   }
 }
 
-export default GoogleMaps;
+export default GoogleMaps

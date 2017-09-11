@@ -46,5 +46,5 @@ module.exports = [
     title: 'Echarts For React',
     icon: 'github',
     href: 'https://github.com/hustcc/echarts-for-react'
-  },
+  }
 ]

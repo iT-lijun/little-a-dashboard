@@ -1,4 +1,4 @@
-import { query} from '../services/table';
+import { query } from '../services/table'
 
 export default {
   namespace: 'table',
@@ -6,23 +6,23 @@ export default {
     data: []
   },
   subscriptions: {
-    setup({ dispatch, history }) {
-    },
+    setup ({ dispatch, history }) {
+    }
   },
   effects: {
-    * query({ payload }, { put, call }) {
-      const data = yield call(query, payload);
+    * query ({ payload }, { put, call }) {
+      const data = yield call(query, payload)
       if (data && data.length > 0) {
         yield put({
           type: 'querySuccess',
-          payload: data,
+          payload: data
         })
       }
     }
   },
   reducers: {
-    querySuccess(state, { payload }) {
-      return { ...state, data: payload };
+    querySuccess (state, { payload }) {
+      return { ...state, data: payload }
     }
-  },
+  }
 }

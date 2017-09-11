@@ -1,5 +1,5 @@
 
-import { hashHistory } from 'dva/router';
+import { hashHistory } from 'dva/router'
 
 export default {
   namespace: 'app',
@@ -11,31 +11,31 @@ export default {
     isShowSidebarBgImg: true,
     // Responsive Sidebar
     siderRespons: document.body.clientWidth < 1201,
-    menuResponsVisible: false,
+    menuResponsVisible: false
   },
   subscriptions: {
 
     setup ({ dispatch }) {
       window.onresize = () => {
-        dispatch({ type: 'siderResponsive' });
+        dispatch({ type: 'siderResponsive' })
       }
-    },
+    }
 
   },
   effects: {
     * lock ({
-      payload,
+      payload
     }, { call, put }) {
-      hashHistory.push('/lock');
+      hashHistory.push('/lock')
     },
     * unlock ({
-      payload,
+      payload
     }, { call, put }) {
-      hashHistory.push('/dashboard');
+      hashHistory.push('/dashboard')
     },
     * siderResponsive ({ payload }, { put, select }) {
-      const { app } = yield select(state => state);
-      const isResponsive = document.body.clientWidth < 1201;
+      const { app } = yield select(state => state)
+      const isResponsive = document.body.clientWidth < 1201
       if (isResponsive !== app.siderRespons) {
         yield put({ type: 'switchSidebarResponsive', payload: isResponsive })
       }
@@ -46,44 +46,44 @@ export default {
       localStorage.setItem('sidebarFold', !state.sidebarFold)
       return {
         ...state,
-        sidebarFold: !state.sidebarFold,
+        sidebarFold: !state.sidebarFold
       }
     },
 
-    switchFullScreen(state) {
+    switchFullScreen (state) {
       localStorage.setItem('fullScreen', !state.fullScreen)
-      return { ...state, fullScreen: !state.fullScreen };
+      return { ...state, fullScreen: !state.fullScreen }
     },
 
-    switchSidebarBgColor(state, action) {
+    switchSidebarBgColor (state, action) {
       localStorage.setItem('sidebarBgColor', action.payload)
-      return { ...state, sidebarBgColor: action.payload };
+      return { ...state, sidebarBgColor: action.payload }
     },
 
-    switchSidebarBgImg(state, action) {
+    switchSidebarBgImg (state, action) {
       localStorage.setItem('sidebarBgImg', action.payload)
-      return { ...state, sidebarBgImg: action.payload };
+      return { ...state, sidebarBgImg: action.payload }
     },
 
-    switchIsShowSidebarBgImg(state) {
+    switchIsShowSidebarBgImg (state) {
       return {
         ...state,
-        isShowSidebarBgImg: !state.isShowSidebarBgImg,
+        isShowSidebarBgImg: !state.isShowSidebarBgImg
       }
     },
 
     switchSidebarResponsive (state, { payload }) {
       return {
         ...state,
-        siderRespons: payload,
+        siderRespons: payload
       }
     },
 
     switchMenuPopver (state) {
       return {
         ...state,
-        menuResponsVisible: !state.menuResponsVisible,
+        menuResponsVisible: !state.menuResponsVisible
       }
-    },
-  },
+    }
+  }
 }

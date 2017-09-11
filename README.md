@@ -4,6 +4,7 @@
 [![DUB](https://img.shields.io/dub/l/vibe-d.svg)]()
 ![](https://img.shields.io/badge/language-javascript-orange.svg)
 [![](https://travis-ci.org/huzzbuzz/little-a-dashboard.svg?branch=master)](https://travis-ci.org/huzzbuzz/little-a-dashboard)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 a little material-design dashboard build upon reactjs, ant design, dva.js. 基于 react.js, ant design, dva.js 开发的类 material 风格的 dashboard。:laughing: :laughing: :laughing:         
 

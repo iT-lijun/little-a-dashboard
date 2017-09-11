@@ -1,10 +1,10 @@
 module.exports = (webpackConfig) => {
   // FilenameHash
-  webpackConfig.output.chunkFilename = '[name].[hash].js';
+  webpackConfig.output.chunkFilename = '[name].[hash].js'
   // Alias
   webpackConfig.resolve.alias = {
-    utils: `${__dirname}/src/utils`,
+    utils: `${__dirname}/src/utils`
   }
 
-  return webpackConfig;
+  return webpackConfig
 }

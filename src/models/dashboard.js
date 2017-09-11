@@ -31,7 +31,7 @@ export default {
         color: 'yellow',
         sub: 'Just Updated',
         subIcon: 'solution'
-      },
+      }
     ],
     imagecard: [
       {
@@ -79,13 +79,13 @@ export default {
     ]
   },
   subscriptions: {
-    setup({ dispatch, history }) {
-    },
+    setup ({ dispatch, history }) {
+    }
   },
   effects: {
 
   },
   reducers: {
 
-  },
+  }
 }

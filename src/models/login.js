@@ -1,33 +1,33 @@
-import { routerRedux } from 'dva/router';
-import { message } from 'antd';
+import { routerRedux } from 'dva/router'
+import { message } from 'antd'
 
 export default {
   namespace: 'login',
   state: {
-    loginLoading: false,
+    loginLoading: false
   },
 
   effects: {
     * login ({
-      payload,
+      payload
     }, { put }) {
-      yield put(routerRedux.push('/dashboard'));
-      yield put({ type: 'hideLoginLoading' });
-      message.success('Welcome!');
-    },
+      yield put(routerRedux.push('/dashboard'))
+      yield put({ type: 'hideLoginLoading' })
+      message.success('Welcome!')
+    }
   },
   reducers: {
     showLoginLoading (state) {
       return {
         ...state,
-        loginLoading: true,
+        loginLoading: true
       }
     },
     hideLoginLoading (state) {
       return {
         ...state,
-        loginLoading: false,
+        loginLoading: false
       }
-    },
-  },
+    }
+  }
 }
