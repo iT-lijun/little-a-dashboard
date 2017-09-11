@@ -11,8 +11,8 @@ class Menus extends React.Component {
     let gn = '';
     for (let i = routes.length - 1; i >= 0; i--) {
       const obj = routes[i];
-      if ('group' in obj) {
-        gn = obj.group;
+      if ('path' in obj) {
+        gn = obj.path;
         break;
       }
     }
@@ -36,32 +36,32 @@ class Menus extends React.Component {
           </Link>
         </Menu.Item>
         <SubMenu key='component' title={<span><Icon type='bars' /><span>Component</span></span>}>
-          <Menu.Item key='component-alert'>
+          <Menu.Item key='alert'>
             <Link to='/alert' style={{color: '#999'}}>
               Alert
             </Link>
           </Menu.Item>
-          <Menu.Item key='component-charts'>
+          <Menu.Item key='charts'>
             <Link to='/charts' style={{color: '#999'}}>
               Charts
             </Link>
           </Menu.Item>
-          <Menu.Item key='component-editor'>
+          <Menu.Item key='editor'>
             <Link to='/editor' style={{color: '#999'}}>
               Editor
             </Link>
           </Menu.Item>
-          <Menu.Item key='component-grid'>
+          <Menu.Item key='grid'>
             <Link to='/grid' style={{color: '#999'}}>
               Grid
             </Link>
           </Menu.Item>
-          <Menu.Item key='component-map'>
+          <Menu.Item key='map'>
             <Link to='/map' style={{color: '#999'}}>
               Map
             </Link>
           </Menu.Item>
-          <Menu.Item key='component-table'>
+          <Menu.Item key='table'>
             <Link to='/table' style={{color: '#999'}}>
               Table
             </Link>
